@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Диагностика: почему в ваших соцсетях нет заявок</title>
+<meta name="description" content="В соцсетях нет заявок, когда аудитория не понимает, что вы продаёте, не видит ваших постов из-за низкого охвата или не доходит до формы заказа. Часто ломается сразу несколько звень">
+<link rel="canonical" href="https://myplayplaymy-debug.github.io/content-tools/diagnostika-zayavok/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Диагностика: почему в ваших соцсетях нет заявок">
+<meta property="og:description" content="В соцсетях нет заявок, когда аудитория не понимает, что вы продаёте, не видит ваших постов из-за низкого охвата или не доходит до формы заказа. Часто ломается сразу несколько звень">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько подписчиков нужно, чтобы пошли заявки", "acceptedAnswer": {"@type": "Answer", "text": "Заявки зависят не от размера базы, а от того, решает ли ваш продукт задачу аудитории и видит ли она предложение. Если оффер попадает в потребность и регулярно мелькает в ленте, первые обращения появляются даже с нескольких десятков активных читателей."}}, {"@type": "Question", "name": "Почему посты набирают охват, но никто не пишет", "acceptedAnswer": {"@type": "Answer", "text": "Охват означает, что контент показали, но не гарантирует интереса к покупке. Возможно, публикации развлекают или дают пользу, но не связаны с вашим предложением, либо в постах нет понятного следующего шага для читателя."}}, {"@type": "Question", "name": "Как часто публиковать, чтобы не потерять аудиторию", "acceptedAnswer": {"@type": "Answer", "text": "Регулярность важнее частоты: лучше выходить раз в три дня стабильно, чем пять постов в понедельник и тишина до конца недели. Алгоритмы площадок поднимают охват тем, кто держит ритм, а читатели привыкают ждать материал в определённое время."}}]}</script>
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;color:#101828;
+   background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+ .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+ header{background:radial-gradient(120% 130% at 15% 0%,#4b7bff,#2458e6 55%,#1b3fa8);color:#fff;
+   padding:74px 0 66px;margin-bottom:44px}
+ header .lab{font-size:13px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+ h1{font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:16px 0 0}
+ header p{font-size:19px;line-height:1.5;margin:22px 0 0;max-width:60ch;opacity:.94}
+ h2{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:44px 0 12px}
+ h3{font-size:19px;font-weight:800;margin:26px 0 6px}
+ p{font-size:17px;margin:0 0 14px}
+ .faq{border-top:3px solid #e3e6ec;margin-top:16px}
+ .faq div{border-bottom:3px solid #e3e6ec;padding:20px 0}
+ .faq h3{margin:0 0 6px}
+ .faq p{margin:0;color:#3d4757}
+ .form{background:#101828;color:#fff;border-radius:20px;padding:38px 34px;margin:46px 0 0}
+ .form h2{margin:0 0 10px;font-size:26px}
+ .form p{opacity:.88}
+ .form .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+ .form input{flex:1 1 220px;font:inherit;font-size:17px;padding:15px 16px;border:0;border-radius:12px;outline:none}
+ .form button{font:inherit;font-size:17px;font-weight:800;padding:15px 30px;border:0;border-radius:12px;
+   background:#2458e6;color:#fff;cursor:pointer}
+ .form button:hover{background:#1b3fa8}
+ .form .ok{margin-top:16px;font-size:15px;opacity:.75}
+ footer{margin:56px 0 40px;padding-top:22px;border-top:3px solid #e3e6ec;
+   display:flex;justify-content:space-between;font-size:14px;flex-wrap:wrap;gap:10px}
+ footer a{color:#2458e6;font-weight:700;text-decoration:none}
+ @media(max-width:640px){header{padding:52px 0 46px}h1{font-size:31px}h2{font-size:23px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="lab">Инструмент</div>
+  <h1>Диагностика: почему в ваших соцсетях нет заявок</h1>
+  <p>В соцсетях нет заявок, когда аудитория не понимает, что вы продаёте, не видит ваших постов из-за низкого охвата или не доходит до формы заказа. Часто ломается сразу несколько звеньев: контент выходит нерегулярно, оффер размыт, призывов к действию нет. Чек-лист ниже покажет, сколько точек у вас провисает, и подскажет, с чего начать ремонт воронки.</p>
+</div></header>
+
+<main class="wrap">
+<!-- ЧЕК-ЛИСТ-ДИАГНОСТИКА "Почему нет заявок"
+     Тильда -> блок T123 (Другое -> HTML-код). Вставлять целиком, без html/head/body. -->
+
+<div id="kkDiag">
+  <div class="kk-wrap">
+    <div class="kk-lab">Диагностика</div>
+    <h2 class="kk-h">Отметьте то, что похоже на вашу ситуацию</h2>
+    <p class="kk-sub">Восемь пунктов. Честно отметьте те, что узнаёте у себя.
+       Внизу появится диагноз и первый шаг.</p>
+
+    <div class="kk-list" id="kkList"></div>
+
+    <div class="kk-res" id="kkRes">
+      <div class="kk-score"><span id="kkN">0</span><small>из 8</small></div>
+      <div class="kk-body">
+        <div class="kk-verdict" id="kkVerdict">Отметьте пункты выше</div>
+        <div class="kk-first" id="kkFirst"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#kkDiag{--acc:#2458e6;--ink:#101828;--mut:#5b6572;--line:#e3e6ec;--paper:#f2f0eb;
+  font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);
+  -webkit-font-smoothing:antialiased}
+#kkDiag *{box-sizing:border-box}
+#kkDiag .kk-wrap{max-width:820px;margin:0 auto;padding:44px 32px;background:#fff;
+  border:3px solid var(--line);border-radius:20px}
+#kkDiag .kk-lab{font-size:13px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc)}
+#kkDiag .kk-h{font-size:36px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:14px 0 0}
+#kkDiag .kk-sub{font-size:17px;line-height:1.5;color:var(--mut);margin:14px 0 0;max-width:58ch}
+#kkDiag .kk-list{margin-top:28px;border:3px solid var(--line);border-radius:14px;overflow:hidden}
+#kkDiag .kk-item{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;cursor:pointer;
+  border-bottom:3px solid var(--line);transition:background .12s}
+#kkDiag .kk-item:last-child{border-bottom:0}
+#kkDiag .kk-item:hover{background:#f7f8fb}
+#kkDiag .kk-item input{position:absolute;opacity:0;pointer-events:none}
+#kkDiag .kk-mark{flex:0 0 28px;height:28px;border:3px solid var(--line);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;
+  color:#fff;transition:.12s;margin-top:1px}
+#kkDiag .kk-item input:checked~.kk-mark{background:var(--acc);border-color:var(--acc)}
+#kkDiag .kk-item input:checked~.kk-mark:after{content:"\2713"}
+#kkDiag .kk-t{font-size:17px;line-height:1.35}
+#kkDiag .kk-item input:checked~.kk-t{font-weight:700}
+#kkDiag .kk-res{margin-top:28px;background:var(--ink);color:#fff;border-radius:18px;
+  padding:30px 32px;display:grid;grid-template-columns:126px 1fr;gap:28px;align-items:center}
+#kkDiag .kk-score{text-align:center;background:rgba(255,255,255,.09);border-radius:14px;padding:20px 8px}
+#kkDiag .kk-score span{display:block;font-size:56px;font-weight:800;line-height:1;letter-spacing:-.04em}
+#kkDiag .kk-score small{display:block;font-size:13px;opacity:.7;margin-top:6px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase}
+#kkDiag .kk-verdict{font-size:23px;font-weight:800;line-height:1.25}
+#kkDiag .kk-first{font-size:16px;line-height:1.45;opacity:.9;margin-top:10px}
+@media(max-width:640px){
+  #kkDiag .kk-wrap{padding:30px 20px}
+  #kkDiag .kk-h{font-size:27px}
+  #kkDiag .kk-res{grid-template-columns:1fr;gap:18px;text-align:center}
+}
+</style>
+
+<script>
+(function () {
+  var ITEMS = [
+    {t: 'Публикую нерегулярно: то неделя тишины, то три поста подряд', k: 'ритм'},
+    {t: 'Темы придумываю в день публикации, системы тем нет', k: 'ритм'},
+    {t: 'Пост заканчивается точкой: человеку некуда написать', k: 'путь'},
+    {t: 'В шапке профиля нет понятного действия для нового человека', k: 'путь'},
+    {t: 'Не знаю, сколько людей написали мне за последний месяц', k: 'счёт'},
+    {t: 'Смотрю на просмотры и лайки, других цифр не считаю', k: 'счёт'},
+    {t: 'Пишу о том, что интересно мне, а не о том, что спрашивают', k: 'смысл'},
+    {t: 'Не могу за минуту объяснить, кому и чем я полезна', k: 'смысл'}
+  ];
+
+  var DIAG = {
+    'ритм':  ['Проседает регулярность',
+              'Начните с одного дня в неделю и держите его четыре недели подряд. Алгоритмы и люди привыкают к предсказуемости, а рывками этого не добиться.'],
+    'путь':  ['Контент есть, пути к вам нет',
+              'Добавьте в конец каждого поста одно понятное действие: кодовое слово, ссылку или вопрос. Человек читает и уходит не потому, что не заинтересовался, а потому что ему некуда нажать.'],
+    'счёт':  ['Вы не видите, что происходит',
+              'Заведите четыре цифры: размер базы, сколько написали сами, сколько дошло до разговора, сколько единиц вышло за месяц. Без них любое решение это угадывание.'],
+    'смысл': ['Непонятно, кому вы нужны',
+              'Соберите позиционирование в одну фразу: кому, с какой задачей и что получают. Пока её нет, контент говорит со всеми сразу и не цепляет никого.']
+  };
+
+  var list = document.getElementById('kkList'),
+      nEl = document.getElementById('kkN'),
+      vEl = document.getElementById('kkVerdict'),
+      fEl = document.getElementById('kkFirst');
+
+  ITEMS.forEach(function (it, i) {
+    var l = document.createElement('label');
+    l.className = 'kk-item';
+    l.innerHTML = '<input type="checkbox" data-k="' + it.k + '">' +
+                  '<span class="kk-mark"></span><span class="kk-t">' + it.t + '</span>';
+    list.appendChild(l);
+  });
+
+  function calc() {
+    var boxes = list.querySelectorAll('input'),
+        n = 0, score = {};
+    boxes.forEach(function (b) {
+      if (b.checked) { n++; score[b.dataset.k] = (score[b.dataset.k] || 0) + 1; }
+    });
+    nEl.textContent = n;
+
+    if (!n) {
+      vEl.textContent = 'Отметьте пункты выше';
+      fEl.textContent = '';
+      return;
+    }
+
+    var top = null;
+    for (var k in score) { if (!top || score[k] > score[top]) top = k; }
+    var d = DIAG[top];
+
+    var lvl = n <= 2 ? 'Точечная проблема. ' : (n <= 5 ? 'Системный сбой. ' : 'Ломается всё сразу. ');
+    vEl.textContent = lvl + d[0];
+    fEl.textContent = 'Чинить первым: ' + d[1];
+
+    var f = document.querySelector('input[name="Результат"]');
+    if (f) { f.value = n + ' из 8, узкое место: ' + d[0].toLowerCase(); }
+  }
+
+  list.addEventListener('change', calc);
+  calc();
+})();
+</script>
+
+
+  <h2>Что означает ваш результат</h2>
+  <p>Цифра показывает количество слабых мест в вашей воронке. Если отмечено больше трёх пунктов, система продаж через контент пока не выстроена, и начинать нужно с того узкого места, которое названо первым.</p>
+
+  <h2>Когда чек-лист не поможет</h2>
+  <p>Инструмент находит технические разрывы в цепочке от публикации до заявки. Он не учитывает спрос на услугу, сезонность ниши и платёжеспособность вашей аудитории.</p>
+
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <div><h3>Сколько подписчиков нужно, чтобы пошли заявки</h3><p>Заявки зависят не от размера базы, а от того, решает ли ваш продукт задачу аудитории и видит ли она предложение. Если оффер попадает в потребность и регулярно мелькает в ленте, первые обращения появляются даже с нескольких десятков активных читателей.</p></div>
+    <div><h3>Почему посты набирают охват, но никто не пишет</h3><p>Охват означает, что контент показали, но не гарантирует интереса к покупке. Возможно, публикации развлекают или дают пользу, но не связаны с вашим предложением, либо в постах нет понятного следующего шага для читателя.</p></div>
+    <div><h3>Как часто публиковать, чтобы не потерять аудиторию</h3><p>Регулярность важнее частоты: лучше выходить раз в три дня стабильно, чем пять постов в понедельник и тишина до конца недели. Алгоритмы площадок поднимают охват тем, кто держит ритм, а читатели привыкают ждать материал в определённое время.</p></div>
+  </div>
+
+  <div class="form">
+    <h2>Разберём ваш случай</h2>
+    <p>Если хотите разобрать вашу ситуацию предметно, оставьте контакт - обсудим детали.</p>
+    <form onsubmit="return kkSend(this)">
+      <input type="hidden" name="Результат" value="">
+      <div class="row">
+        <input name="name" placeholder="Как вас зовут" required>
+        <input name="tg" placeholder="Ваш телеграм" required>
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
+    <div class="ok" id="kkOk">Отвечу лично, в течение дня. Рассылок не будет.</div>
+  </div>
+
+  <footer>
+    <span>Мария Кукушкина. Контент-завод под ключ</span>
+    <span><a href="https://t.me/kukushkina_content">Канал</a> &nbsp; <a href="https://t.me/marya_kukushkina">Написать лично</a></span>
+  </footer>
+</main>
+
+<script>
+function kkSend(f){
+  var r = f.querySelector('input[name="Результат"]').value || 'без расчёта';
+  var t = 'Заявка с сайта%0A%0AИмя: ' + encodeURIComponent(f.name.value) +
+          '%0AТелеграм: ' + encodeURIComponent(f.tg.value) +
+          '%0AРезультат: ' + encodeURIComponent(r);
+  document.getElementById('kkOk').textContent =
+    'Спасибо. Открываю телеграм, отправьте сообщение одной кнопкой.';
+  window.open('https://t.me/marya_kukushkina?text=' + t, '_blank');
+  return false;
+}
+</script>
+</body>
+</html>
