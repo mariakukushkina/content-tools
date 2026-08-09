@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Калькулятор: сколько вам стоит вести соцсети самому</title>
+<meta name="description" content="Если вести соцсети самостоятельно, реальная стоимость складывается из времени, потраченного на создание контента, съёмку, монтаж и публикацию. Умножьте часы в неделю на вашу часову">
+<link rel="canonical" href="https://myplayplaymy-debug.github.io/content-tools/kalkulyator-soczsetej/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Калькулятор: сколько вам стоит вести соцсети самому">
+<meta property="og:description" content="Если вести соцсети самостоятельно, реальная стоимость складывается из времени, потраченного на создание контента, съёмку, монтаж и публикацию. Умножьте часы в неделю на вашу часову">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как посчитать свою часовую ставку, если я на окладе", "acceptedAnswer": {"@type": "Answer", "text": "Разделите месячный доход на количество рабочих часов в месяце. Обычно это 160-176 часов при пятидневке. Полученная сумма и будет вашей часовой ставкой."}}, {"@type": "Question", "name": "Сколько часов в неделю уходит на соцсети в среднем", "acceptedAnswer": {"@type": "Answer", "text": "Зависит от формата и количества площадок. Один пост с нуля занимает от 40 минут до двух часов. Если публикуете три раза в неделю на двух площадках, счёт идёт от 4 до 12 часов еженедельно."}}, {"@type": "Question", "name": "Когда имеет смысл вести соцсети самому, а не делегировать", "acceptedAnswer": {"@type": "Answer", "text": "Если вам нужен личный бренд и вы хотите контролировать каждое слово на старте. Или если стоимость вашего времени ниже рыночной цены на подрядчика. В остальных случаях делегирование высвобождает ресурс под экспертизу."}}]}</script>
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;color:#101828;
+   background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+ .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+ header{background:radial-gradient(120% 130% at 15% 0%,#4b7bff,#2458e6 55%,#1b3fa8);color:#fff;
+   padding:74px 0 66px;margin-bottom:44px}
+ header .lab{font-size:13px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+ h1{font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:16px 0 0}
+ header p{font-size:19px;line-height:1.5;margin:22px 0 0;max-width:60ch;opacity:.94}
+ h2{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:44px 0 12px}
+ h3{font-size:19px;font-weight:800;margin:26px 0 6px}
+ p{font-size:17px;margin:0 0 14px}
+ .faq{border-top:3px solid #e3e6ec;margin-top:16px}
+ .faq div{border-bottom:3px solid #e3e6ec;padding:20px 0}
+ .faq h3{margin:0 0 6px}
+ .faq p{margin:0;color:#3d4757}
+ .form{background:#101828;color:#fff;border-radius:20px;padding:38px 34px;margin:46px 0 0}
+ .form h2{margin:0 0 10px;font-size:26px}
+ .form p{opacity:.88}
+ .form .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+ .form input{flex:1 1 220px;font:inherit;font-size:17px;padding:15px 16px;border:0;border-radius:12px;outline:none}
+ .form button{font:inherit;font-size:17px;font-weight:800;padding:15px 30px;border:0;border-radius:12px;
+   background:#2458e6;color:#fff;cursor:pointer}
+ .form button:hover{background:#1b3fa8}
+ .form .ok{margin-top:16px;font-size:15px;opacity:.75}
+ footer{margin:56px 0 40px;padding-top:22px;border-top:3px solid #e3e6ec;
+   display:flex;justify-content:space-between;font-size:14px;flex-wrap:wrap;gap:10px}
+ footer a{color:#2458e6;font-weight:700;text-decoration:none}
+ @media(max-width:640px){header{padding:52px 0 46px}h1{font-size:31px}h2{font-size:23px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="lab">Инструмент</div>
+  <h1>Калькулятор: сколько вам стоит вести соцсети самому</h1>
+  <p>Если вести соцсети самостоятельно, реальная стоимость складывается из времени, потраченного на создание контента, съёмку, монтаж и публикацию. Умножьте часы в неделю на вашу часовую ставку и получите сумму за год. Калькулятор ниже покажет, во что вам обходится личное ведение аккаунтов в пересчёте на рабочее время.</p>
+</div></header>
+
+<main class="wrap">
+<!-- ================================================================
+     КАЛЬКУЛЯТОР "Сколько вам стоит вести соцсети самому"
+     Куда вставлять: Тильда -> блок T123 (Другое -> HTML-код)
+     Весь код целиком, включая <style> и <script>, в одно поле.
+     НЕ добавлять теги <html>, <head>, <body>: Тильда их подставит сама.
+     ================================================================ -->
+
+<div id="kkCalc">
+  <div class="kk-wrap">
+    <div class="kk-lab">Калькулятор</div>
+    <h2 class="kk-h">Сколько вам стоит вести соцсети самому</h2>
+    <p class="kk-sub">Контент кажется бесплатным, потому что вы делаете его сами.
+       Никто не выставляет счёт, значит и расхода вроде нет. Посчитаем.</p>
+
+    <div class="kk-field">
+      <label for="kkHours">Часов в неделю на соцсети <b id="kkHoursVal">6</b></label>
+      <input id="kkHours" type="range" min="1" max="25" step="1" value="6">
+      <div class="kk-hint">Придумать тему, написать, оформить, выложить, ответить в комментариях</div>
+    </div>
+
+    <div class="kk-field">
+      <label for="kkRate">Сколько стоит ваш рабочий час, рублей</label>
+      <input id="kkRate" type="number" min="100" step="100" value="2000" inputmode="numeric">
+      <div class="kk-hint">Возьмите ставку по основной работе, а не по контенту</div>
+    </div>
+
+    <div class="kk-out">
+      <div class="kk-cell">
+        <div class="kk-k">Часов в год</div>
+        <div class="kk-v" id="kkYear">312</div>
+      </div>
+      <div class="kk-cell kk-cell--acc">
+        <div class="kk-k">Стоит вам в год</div>
+        <div class="kk-v" id="kkMoney">624 000 ₽</div>
+      </div>
+      <div class="kk-cell">
+        <div class="kk-k">Рабочих недель</div>
+        <div class="kk-v" id="kkWeeks">7,8</div>
+      </div>
+    </div>
+
+    <div class="kk-note" id="kkNote"></div>
+  </div>
+</div>
+
+<style>
+#kkCalc{--acc:#2458e6;--acc-d:#1b3fa8;--ink:#101828;--mut:#5b6572;--line:#e3e6ec;--paper:#f2f0eb;
+  font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);
+  -webkit-font-smoothing:antialiased}
+#kkCalc *{box-sizing:border-box}
+#kkCalc .kk-wrap{max-width:760px;margin:0 auto;padding:44px 32px;background:#fff;
+  border:3px solid var(--line);border-radius:20px}
+#kkCalc .kk-lab{font-size:13px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc)}
+#kkCalc .kk-h{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:14px 0 0}
+#kkCalc .kk-sub{font-size:17px;line-height:1.5;color:var(--mut);margin:16px 0 0;max-width:56ch}
+#kkCalc .kk-field{margin-top:30px}
+#kkCalc .kk-field label{display:block;font-size:16px;font-weight:700;margin-bottom:12px}
+#kkCalc .kk-field label b{color:var(--acc)}
+#kkCalc .kk-hint{font-size:14px;color:var(--mut);margin-top:8px}
+#kkCalc input[type=range]{width:100%;height:6px;-webkit-appearance:none;appearance:none;
+  background:var(--line);border-radius:99px;outline:none}
+#kkCalc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;
+  border-radius:50%;background:var(--acc);cursor:pointer;border:4px solid #fff;
+  box-shadow:0 2px 10px rgba(36,88,230,.45)}
+#kkCalc input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;
+  background:var(--acc);cursor:pointer;border:4px solid #fff}
+#kkCalc input[type=number]{width:100%;font:inherit;font-size:20px;font-weight:700;padding:14px 16px;
+  border:3px solid var(--line);border-radius:12px;outline:none}
+#kkCalc input[type=number]:focus{border-color:var(--acc)}
+#kkCalc .kk-out{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:34px}
+#kkCalc .kk-cell{background:var(--paper);border-radius:16px;padding:24px 18px;text-align:center}
+#kkCalc .kk-cell--acc{background:var(--acc);color:#fff}
+#kkCalc .kk-k{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+#kkCalc .kk-v{font-size:34px;font-weight:800;letter-spacing:-.03em;margin-top:8px;line-height:1.05}
+#kkCalc .kk-note{margin-top:26px;background:var(--ink);color:#fff;border-radius:14px;
+  padding:22px 26px;font-size:17px;line-height:1.45}
+@media (max-width:640px){
+  #kkCalc .kk-wrap{padding:30px 20px}
+  #kkCalc .kk-h{font-size:28px}
+  #kkCalc .kk-out{grid-template-columns:1fr;gap:10px}
+  #kkCalc .kk-v{font-size:30px}
+}
+</style>
+
+<script>
+(function () {
+  var h = document.getElementById('kkHours'),
+      r = document.getElementById('kkRate'),
+      hv = document.getElementById('kkHoursVal'),
+      oY = document.getElementById('kkYear'),
+      oM = document.getElementById('kkMoney'),
+      oW = document.getElementById('kkWeeks'),
+      note = document.getElementById('kkNote');
+
+  function money(n) {
+    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+  }
+
+  function calc() {
+    var hours = Number(h.value) || 0,
+        rate = Number(r.value) || 0,
+        year = hours * 52,
+        cost = year * rate,
+        weeks = year / 40;
+
+    hv.textContent = hours;
+    oY.textContent = year;
+    oM.textContent = money(cost);
+    oW.textContent = weeks.toFixed(1).replace('.', ',');
+
+    note.innerHTML = 'Это ' + weeks.toFixed(1).replace('.', ',') +
+      ' рабочих недель в год. Почти ' + (weeks / 4).toFixed(1).replace('.', ',') +
+      ' месяца вы работаете сами у себя контент-менеджером, и стоит это ' + money(cost) + '.';
+
+    // Значение уедет в форму Тильды, если ниже стоит блок с полем "Результат"
+    var f = document.querySelector('#rec input[name="Результат"], input[name="Результат"]');
+    if (f) { f.value = hours + ' ч/нед, ' + year + ' ч/год, ' + money(cost); }
+  }
+
+  h.addEventListener('input', calc);
+  r.addEventListener('input', calc);
+  calc();
+})();
+</script>
+
+
+  <h2>Что означает эта сумма</h2>
+  <p>Цифра показывает альтернативную стоимость: сколько вы могли бы заработать за это время на основной работе. Если сумма выше бюджета на делегирование, стоит пересмотреть подход к производству контента.</p>
+
+  <h2>Что калькулятор не учитывает</h2>
+  <p>Расчёт показывает только прямые часы работы над контентом. Сюда не входят обучение, исправление ошибок, время на изучение трендов и алгоритмов площадок.</p>
+
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <div><h3>Как посчитать свою часовую ставку, если я на окладе</h3><p>Разделите месячный доход на количество рабочих часов в месяце. Обычно это 160-176 часов при пятидневке. Полученная сумма и будет вашей часовой ставкой.</p></div>
+    <div><h3>Сколько часов в неделю уходит на соцсети в среднем</h3><p>Зависит от формата и количества площадок. Один пост с нуля занимает от 40 минут до двух часов. Если публикуете три раза в неделю на двух площадках, счёт идёт от 4 до 12 часов еженедельно.</p></div>
+    <div><h3>Когда имеет смысл вести соцсети самому, а не делегировать</h3><p>Если вам нужен личный бренд и вы хотите контролировать каждое слово на старте. Или если стоимость вашего времени ниже рыночной цены на подрядчика. В остальных случаях делегирование высвобождает ресурс под экспертизу.</p></div>
+  </div>
+
+  <div class="form">
+    <h2>Разберём ваш случай</h2>
+    <p>Оставьте контакт, если хотите обсудить производство контента без вашего участия в процессе.</p>
+    <form onsubmit="return kkSend(this)">
+      <input type="hidden" name="Результат" value="">
+      <div class="row">
+        <input name="name" placeholder="Как вас зовут" required>
+        <input name="tg" placeholder="Ваш телеграм" required>
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
+    <div class="ok" id="kkOk">Отвечу лично, в течение дня. Рассылок не будет.</div>
+  </div>
+
+  <footer>
+    <span>Мария Кукушкина. Контент-завод под ключ</span>
+    <span><a href="https://t.me/kukushkina_content">Канал</a> &nbsp; <a href="https://t.me/marya_kukushkina">Написать лично</a></span>
+  </footer>
+</main>
+
+<script>
+function kkSend(f){
+  var r = f.querySelector('input[name="Результат"]').value || 'без расчёта';
+  var t = 'Заявка с сайта%0A%0AИмя: ' + encodeURIComponent(f.name.value) +
+          '%0AТелеграм: ' + encodeURIComponent(f.tg.value) +
+          '%0AРезультат: ' + encodeURIComponent(r);
+  document.getElementById('kkOk').textContent =
+    'Спасибо. Открываю телеграм, отправьте сообщение одной кнопкой.';
+  window.open('https://t.me/marya_kukushkina?text=' + t, '_blank');
+  return false;
+}
+</script>
+</body>
+</html>
