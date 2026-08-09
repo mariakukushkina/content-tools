@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Калькулятор: сколько единиц контента выйдет из вашей записи</title>
+<meta name="description" content="Из 10 минут голосовой записи и 5 минут видео получается около 9 единиц контента в неделю: посты, карусели, ролики, кружки и подкаст. Из 20 минут голосового и 10 минут видео - около">
+<link rel="canonical" href="https://myplayplaymy-debug.github.io/content-tools/skolko-kontenta-iz-zapisi/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Калькулятор: сколько единиц контента выйдет из вашей записи">
+<meta property="og:description" content="Из 10 минут голосовой записи и 5 минут видео получается около 9 единиц контента в неделю: посты, карусели, ролики, кружки и подкаст. Из 20 минут голосового и 10 минут видео - около">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему из одной записи получается несколько единиц контента?", "acceptedAnswer": {"@type": "Answer", "text": "Одна мысль адаптируется под разные форматы и площадки. Из фрагмента голосового получается пост, карусель, текст для подкаста и основа для ролика. Каждая адаптация считается отдельной единицей."}}, {"@type": "Question", "name": "Сколько времени нужно записывать, чтобы закрыть все площадки?", "acceptedAnswer": {"@type": "Answer", "text": "Для регулярного присутствия на 3-4 площадках достаточно 10-15 минут голосового и 5-10 минут видео в неделю. Конкретная цифра зависит от числа площадок и желаемой частоты публикаций."}}, {"@type": "Question", "name": "Нужно ли записывать отдельно для каждого формата?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, записываете один раз - получаете адаптацию под все форматы. Из голосового собираются тексты, из видео нарезаются ролики и кружки, всё остальное формируется автоматически."}}]}</script>
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;color:#101828;
+   background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+ .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+ header{background:radial-gradient(120% 130% at 15% 0%,#4b7bff,#2458e6 55%,#1b3fa8);color:#fff;
+   padding:74px 0 66px;margin-bottom:44px}
+ header .lab{font-size:13px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+ h1{font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:16px 0 0}
+ header p{font-size:19px;line-height:1.5;margin:22px 0 0;max-width:60ch;opacity:.94}
+ h2{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:44px 0 12px}
+ h3{font-size:19px;font-weight:800;margin:26px 0 6px}
+ p{font-size:17px;margin:0 0 14px}
+ .faq{border-top:3px solid #e3e6ec;margin-top:16px}
+ .faq div{border-bottom:3px solid #e3e6ec;padding:20px 0}
+ .faq h3{margin:0 0 6px}
+ .faq p{margin:0;color:#3d4757}
+ .form{background:#101828;color:#fff;border-radius:20px;padding:38px 34px;margin:46px 0 0}
+ .form h2{margin:0 0 10px;font-size:26px}
+ .form p{opacity:.88}
+ .form .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+ .form input{flex:1 1 220px;font:inherit;font-size:17px;padding:15px 16px;border:0;border-radius:12px;outline:none}
+ .form button{font:inherit;font-size:17px;font-weight:800;padding:15px 30px;border:0;border-radius:12px;
+   background:#2458e6;color:#fff;cursor:pointer}
+ .form button:hover{background:#1b3fa8}
+ .form .ok{margin-top:16px;font-size:15px;opacity:.75}
+ footer{margin:56px 0 40px;padding-top:22px;border-top:3px solid #e3e6ec;
+   display:flex;justify-content:space-between;font-size:14px;flex-wrap:wrap;gap:10px}
+ footer a{color:#2458e6;font-weight:700;text-decoration:none}
+ @media(max-width:640px){header{padding:52px 0 46px}h1{font-size:31px}h2{font-size:23px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="lab">Инструмент</div>
+  <h1>Калькулятор: сколько единиц контента выйдет из вашей записи</h1>
+  <p>Из 10 минут голосовой записи и 5 минут видео получается около 9 единиц контента в неделю: посты, карусели, ролики, кружки и подкаст. Из 20 минут голосового и 10 минут видео - около 18 единиц. Калькулятор ниже покажет точную цифру для вашего случая с разбивкой по форматам и площадкам.</p>
+</div></header>
+
+<main class="wrap">
+<!-- КАЛЬКУЛЯТОР "Сколько контента выйдет из вашей записи"
+     Тильда -> блок T123 (Другое -> HTML-код). Вставлять целиком, без html/head/body. -->
+
+<div id="kkUnits">
+  <div class="kk-wrap">
+    <div class="kk-lab">Калькулятор</div>
+    <h2 class="kk-h">Сколько контента выйдет из вашей записи</h2>
+    <p class="kk-sub">Контент не придумывают каждый день, его производят из одного источника.
+       Поставьте свои цифры и посмотрите, что из них соберётся.</p>
+
+    <div class="kk-grid">
+      <div class="kk-field">
+        <label for="kkVoice">Голосовое в неделю, минут <b id="kkVoiceV">10</b></label>
+        <input id="kkVoice" type="range" min="0" max="30" step="1" value="10">
+      </div>
+      <div class="kk-field">
+        <label for="kkVideo">Видео в неделю, минут <b id="kkVideoV">5</b></label>
+        <input id="kkVideo" type="range" min="0" max="30" step="1" value="5">
+      </div>
+      <div class="kk-field">
+        <label for="kkPl">Сколько площадок ведёте <b id="kkPlV">3</b></label>
+        <input id="kkPl" type="range" min="1" max="7" step="1" value="3">
+      </div>
+    </div>
+
+    <div class="kk-total">
+      <div class="kk-big"><span id="kkSum">0</span><small>единиц контента в неделю</small></div>
+      <div class="kk-side" id="kkSide"></div>
+    </div>
+
+    <div class="kk-rows" id="kkRows"></div>
+    <div class="kk-note" id="kkNote"></div>
+  </div>
+</div>
+
+<style>
+#kkUnits{--acc:#2458e6;--ink:#101828;--mut:#5b6572;--line:#e3e6ec;--paper:#f2f0eb;
+  font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);
+  -webkit-font-smoothing:antialiased}
+#kkUnits *{box-sizing:border-box}
+#kkUnits .kk-wrap{max-width:820px;margin:0 auto;padding:44px 32px;background:#fff;
+  border:3px solid var(--line);border-radius:20px}
+#kkUnits .kk-lab{font-size:13px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc)}
+#kkUnits .kk-h{font-size:36px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:14px 0 0}
+#kkUnits .kk-sub{font-size:17px;line-height:1.5;color:var(--mut);margin:14px 0 0;max-width:56ch}
+#kkUnits .kk-grid{margin-top:30px;display:grid;gap:24px}
+#kkUnits .kk-field label{display:block;font-size:16px;font-weight:700;margin-bottom:11px}
+#kkUnits .kk-field label b{color:var(--acc)}
+#kkUnits input[type=range]{width:100%;height:6px;-webkit-appearance:none;appearance:none;
+  background:var(--line);border-radius:99px;outline:none}
+#kkUnits input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;
+  border-radius:50%;background:var(--acc);cursor:pointer;border:4px solid #fff;
+  box-shadow:0 2px 10px rgba(36,88,230,.45)}
+#kkUnits input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;
+  background:var(--acc);cursor:pointer;border:4px solid #fff}
+#kkUnits .kk-total{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+#kkUnits .kk-big{background:var(--acc);color:#fff;border-radius:16px;padding:26px 24px}
+#kkUnits .kk-big span{display:block;font-size:72px;font-weight:800;line-height:.95;letter-spacing:-.045em}
+#kkUnits .kk-big small{display:block;font-size:14px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;opacity:.85;margin-top:10px}
+#kkUnits .kk-side{background:var(--paper);border-radius:16px;padding:22px 24px;font-size:16px;
+  line-height:1.4;display:flex;align-items:center}
+#kkUnits .kk-rows{margin-top:18px;border:3px solid var(--line);border-radius:14px;overflow:hidden}
+#kkUnits .kk-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;
+  border-bottom:3px solid var(--line)}
+#kkUnits .kk-row:last-child{border-bottom:0}
+#kkUnits .kk-q{background:var(--paper);font-size:22px;font-weight:800;padding:16px 0;text-align:center;
+  align-self:stretch;display:flex;align-items:center;justify-content:center}
+#kkUnits .kk-n{padding:15px 20px;font-size:17px}
+#kkUnits .kk-s{padding:15px 20px;font-size:13px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--acc)}
+#kkUnits .kk-note{margin-top:22px;background:var(--ink);color:#fff;border-radius:14px;
+  padding:22px 26px;font-size:17px;line-height:1.45}
+@media(max-width:640px){
+  #kkUnits .kk-wrap{padding:30px 20px}
+  #kkUnits .kk-h{font-size:27px}
+  #kkUnits .kk-total{grid-template-columns:1fr}
+  #kkUnits .kk-big span{font-size:58px}
+  #kkUnits .kk-row{grid-template-columns:52px 1fr}
+  #kkUnits .kk-s{grid-column:2;padding-top:0}
+}
+</style>
+
+<script>
+(function () {
+  var v = document.getElementById('kkVoice'),
+      d = document.getElementById('kkVideo'),
+      p = document.getElementById('kkPl'),
+      vv = document.getElementById('kkVoiceV'),
+      dv = document.getElementById('kkVideoV'),
+      pv = document.getElementById('kkPlV'),
+      sum = document.getElementById('kkSum'),
+      side = document.getElementById('kkSide'),
+      rows = document.getElementById('kkRows'),
+      note = document.getElementById('kkNote');
+
+  function word(n, a, b, c) {
+    var x = n % 100;
+    if (x > 10 && x < 20) return c;
+    x = n % 10;
+    if (x === 1) return a;
+    if (x > 1 && x < 5) return b;
+    return c;
+  }
+
+  function calc() {
+    var voice = Number(v.value), video = Number(d.value), pl = Number(p.value);
+    vv.textContent = voice; dv.textContent = video; pv.textContent = pl;
+
+    // Из голосового идут текстовые единицы и подкаст, из видео нарезки
+    var posts = Math.floor(voice / 3);            // пост на каждые 3 минуты речи
+    var podcast = voice >= 8 ? 1 : 0;             // подкаст, если речи хватает
+    var carousel = Math.floor(voice / 6);         // карусель из смысловых блоков
+    var clips = Math.floor(video / 1.5);          // нарезка на вертикальные ролики
+    var circles = video >= 3 ? Math.min(3, Math.floor(video / 3)) : 0;
+
+    var items = [
+      ['Посты и разборы', posts, 'из голосового'],
+      ['Карусели', carousel, 'из голосового'],
+      ['Подкаст', podcast, 'из голосового'],
+      ['Вертикальные ролики', clips, 'из видео'],
+      ['Кружки', circles, 'из видео']
+    ].filter(function (x) { return x[1] > 0; });
+
+    var total = items.reduce(function (a, x) { return a + x[1]; }, 0);
+    sum.textContent = total;
+
+    rows.innerHTML = items.map(function (x) {
+      return '<div class="kk-row"><div class="kk-q">' + x[1] + '</div>' +
+             '<div class="kk-n">' + x[0] + '</div>' +
+             '<div class="kk-s">' + x[2] + '</div></div>';
+    }).join('') || '<div class="kk-n" style="padding:24px 20px;color:#5b6572">' +
+                   'Подвиньте ползунки: пока записывать нечего</div>';
+
+    if (!total) {
+      side.innerHTML = '<span>Без исходников контента не будет. Начните хотя бы с пяти минут голосового.</span>';
+      note.textContent = 'Десять минут записи в неделю это минимум, на котором система уже держится.';
+      return;
+    }
+
+    var perPlatform = (total / pl).toFixed(1).replace('.', ',');
+    side.innerHTML = '<span>На каждую из <b>' + pl + '</b> ' + word(pl, 'площадки', 'площадок', 'площадок') +
+      ' выйдет по <b>' + perPlatform + '</b> ' + word(Math.round(total / pl), 'единице', 'единицы', 'единиц') +
+      ' в неделю. За месяц это <b>' + total * 4 + '</b> ' +
+      word(total * 4, 'единица', 'единицы', 'единиц') + '.</span>';
+
+    var mins = Number(v.value) + Number(d.value);
+    note.innerHTML = 'Вы говорите <b>' + mins + '</b> ' + word(mins, 'минуту', 'минуты', 'минут') +
+      ' в неделю и получаете <b>' + total + '</b> ' +
+      word(total, 'единицу', 'единицы', 'единиц') +
+      ' контента. Всё остальное это разбор записи на форматы, и его делает система.';
+
+    var f = document.querySelector('input[name="Результат"]');
+    if (f) { f.value = mins + ' мин записи, ' + total + ' единиц/нед, ' + pl + ' площадок'; }
+  }
+
+  [v, d, p].forEach(function (el) { el.addEventListener('input', calc); });
+  calc();
+})();
+</script>
+
+
+  <h2>Что означает эта цифра</h2>
+  <p>Вы видите количество готовых материалов, которые выходят из исходников за неделю. Калькулятор учитывает адаптацию под разные форматы и площадки, поэтому одна мысль превращается в несколько единиц контента.</p>
+
+  <h2>Когда цифра будет меньше</h2>
+  <p>Результат зависит от плотности материала в исходниках. Если запись содержит одну мысль, растянутую на 10 минут, выхлоп будет ниже расчётного.</p>
+
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <div><h3>Почему из одной записи получается несколько единиц контента?</h3><p>Одна мысль адаптируется под разные форматы и площадки. Из фрагмента голосового получается пост, карусель, текст для подкаста и основа для ролика. Каждая адаптация считается отдельной единицей.</p></div>
+    <div><h3>Сколько времени нужно записывать, чтобы закрыть все площадки?</h3><p>Для регулярного присутствия на 3-4 площадках достаточно 10-15 минут голосового и 5-10 минут видео в неделю. Конкретная цифра зависит от числа площадок и желаемой частоты публикаций.</p></div>
+    <div><h3>Нужно ли записывать отдельно для каждого формата?</h3><p>Нет, записываете один раз - получаете адаптацию под все форматы. Из голосового собираются тексты, из видео нарезаются ролики и кружки, всё остальное формируется автоматически.</p></div>
+  </div>
+
+  <div class="form">
+    <h2>Разберём ваш случай</h2>
+    <p>Оставьте контакт, если хотите обсудить производство контента для вашего проекта.</p>
+    <form onsubmit="return kkSend(this)">
+      <input type="hidden" name="Результат" value="">
+      <div class="row">
+        <input name="name" placeholder="Как вас зовут" required>
+        <input name="tg" placeholder="Ваш телеграм" required>
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
+    <div class="ok" id="kkOk">Отвечу лично, в течение дня. Рассылок не будет.</div>
+  </div>
+
+  <footer>
+    <span>Мария Кукушкина. Контент-завод под ключ</span>
+    <span><a href="https://t.me/kukushkina_content">Канал</a> &nbsp; <a href="https://t.me/marya_kukushkina">Написать лично</a></span>
+  </footer>
+</main>
+
+<script>
+function kkSend(f){
+  var r = f.querySelector('input[name="Результат"]').value || 'без расчёта';
+  var t = 'Заявка с сайта%0A%0AИмя: ' + encodeURIComponent(f.name.value) +
+          '%0AТелеграм: ' + encodeURIComponent(f.tg.value) +
+          '%0AРезультат: ' + encodeURIComponent(r);
+  document.getElementById('kkOk').textContent =
+    'Спасибо. Открываю телеграм, отправьте сообщение одной кнопкой.';
+  window.open('https://t.me/marya_kukushkina?text=' + t, '_blank');
+  return false;
+}
+</script>
+</body>
+</html>
