@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myplayplaymy-debug.github.io/content-tools/sitemap.xml
