@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Смыслы из отзывов: упаковка по чужим словам</title>
+<meta name="description" content="Метод, который превращает отзывы о конкурентах в позиционирование, оффер и темы контента. Инструмент Марии Кукушкиной.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#2458e6;--ink:#101828;--mut:#5b6572;--line:#e3e6ec;--paper:#f2f0eb;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);
+     background:#fff;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:44px 20px 90px}
+.lab{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+     color:var(--acc);margin-bottom:10px}
+h1{font-size:40px;line-height:1.08;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;line-height:1.15;margin:38px 0 12px;letter-spacing:-.01em}
+h3{font-size:18px;margin-bottom:6px}
+p{margin-bottom:12px;color:#28303c}
+p.mut{color:var(--mut);font-size:15px}
+.lead{font-size:18px;color:var(--mut);margin-bottom:8px}
+
+.step{background:var(--paper);border-radius:var(--r);padding:20px 22px;margin-bottom:14px}
+.step .n{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--acc);
+     color:#fff;font-size:13px;font-weight:800;align-items:center;justify-content:center;
+     margin-right:8px}
+.step h3{display:flex;align-items:center;margin-bottom:8px}
+.step p:last-child{margin-bottom:0}
+
+.tool{border:1px solid var(--line);border-radius:var(--r);padding:22px;margin:18px 0}
+textarea{width:100%;min-height:92px;border:1px solid var(--line);border-radius:12px;
+     padding:13px 15px;font:inherit;font-size:16px;resize:vertical;color:var(--ink)}
+textarea:focus{outline:2px solid var(--acc);outline-offset:-1px}
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.cat{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;
+     font:inherit;font-size:14px;font-weight:700;cursor:pointer;color:var(--mut)}
+.cat.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.add{background:var(--acc);color:#fff;border:0;border-radius:12px;padding:13px 22px;
+     font:inherit;font-size:16px;font-weight:800;cursor:pointer}
+.add:disabled{background:#c3ccdb;cursor:default}
+.hint{font-size:14px;color:var(--mut);margin-top:10px}
+
+.bins{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+@media(max-width:640px){.bins{grid-template-columns:1fr}h1{font-size:31px}}
+.bin{border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.bin b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+     color:var(--acc);margin-bottom:8px}
+.bin ul{list-style:none}
+.bin li{font-size:15px;padding:7px 0;border-top:1px solid var(--line);display:flex;
+     justify-content:space-between;gap:10px;align-items:flex-start}
+.bin li:first-child{border-top:0}
+.bin .del{background:none;border:0;color:#b9c0cc;font-size:18px;cursor:pointer;
+     line-height:1;padding:0 2px}
+.bin .empty{font-size:14px;color:#9aa3b0;padding:6px 0}
+
+.go{background:var(--ink);color:#fff;border:0;border-radius:12px;padding:16px 26px;
+    font:inherit;font-size:17px;font-weight:800;cursor:pointer;width:100%;margin-top:18px}
+.go:disabled{background:#c3ccdb;cursor:default}
+
+#out{display:none;margin-top:26px}
+.res{background:var(--ink);color:#fff;border-radius:var(--r);padding:24px;margin-bottom:14px}
+.res b.k{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+     color:#8fa4ff;margin-bottom:8px}
+.res .big{font-size:21px;line-height:1.4;font-weight:700}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin-bottom:12px}
+.card ol,.card ul{margin:0 0 0 18px}
+.card li{margin-bottom:8px;font-size:15.5px}
+.copy{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:12px;
+     padding:13px 20px;font:inherit;font-weight:700;cursor:pointer}
+
+.form{background:var(--paper);border-radius:var(--r);padding:24px;margin-top:30px}
+.form input{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 15px;
+     font:inherit;font-size:16px;margin-bottom:10px}
+.form button{background:var(--acc);color:#fff;border:0;border-radius:12px;padding:14px 24px;
+     font:inherit;font-size:16px;font-weight:800;cursor:pointer}
+.ok{color:#178a4c;font-weight:700;margin-top:10px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-size:14px;
+     color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--acc);text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="lab">Инструмент</div>
+<h1>Смыслы из отзывов:<br>упаковка чужими словами</h1>
+<p class="lead">Позиционирование не придумывают за столом. Оно уже написано в отзывах
+о ваших конкурентах, просто чужими руками и не в том порядке.</p>
+
+<p>Люди в отзывах рассказывают всё: чего боялись до визита, почему выбрали именно эту
+компанию, что оказалось неожиданно хорошо и за что они готовы платить дороже. Там же лежат
+их собственные слова, а не те, которыми говорит ваш маркетинг. Соберите это, разложите
+по пяти корзинам, и упаковка соберётся сама.</p>
+
+<h2>Как собрать материал</h2>
+
+<div class="step">
+  <h3><span class="n">1</span>Возьмите трёх конкурентов и себя</h3>
+  <p>Ищите в 2ГИС и на Яндекс Картах по своему запросу. Берите не самых крупных, а тех,
+  кто рядом с вами по ценам. Их клиент это и ваш клиент тоже.</p>
+</div>
+
+<div class="step">
+  <h3><span class="n">2</span>Читайте развёрнутые отзывы, а не оценки</h3>
+  <p>Пятёрка со словом «отлично» бесполезна. Нужны те, где человек рассказывает историю.
+  Обязательно откройте отрицательные, там прямым текстом написано, чего люди не прощают.</p>
+</div>
+
+<div class="step">
+  <h3><span class="n">3</span>Копируйте цитаты дословно</h3>
+  <p>Не пересказывайте своими словами, иначе потеряете самое ценное. Фраза «боялась, что
+  будет как в детстве» работает, а «страх боли» не работает, потому что так никто не говорит.</p>
+</div>
+
+<div class="step">
+  <h3><span class="n">4</span>Разложите по корзинам ниже</h3>
+  <p>Пятнадцати цитат достаточно, чтобы увидеть повторы. Повтор это и есть смысл: то, что
+  волнует не одного человека, а рынок.</p>
+</div>
+
+<h2>Разложите цитаты</h2>
+<div class="tool">
+  <textarea id="q" placeholder="Вставьте цитату из отзыва целиком, например: «Долго не решалась, думала, что будет больно, а оказалось терпимо, врач всё время спрашивал, как я»"></textarea>
+  <div class="cats" id="cats"></div>
+  <button class="add" id="addBtn" disabled>Добавить в корзину</button>
+  <div class="hint" id="hint">Выберите корзину, чтобы добавить цитату.</div>
+
+  <div class="bins" id="bins"></div>
+  <button class="go" id="goBtn" disabled>Собрать смыслы</button>
+</div>
+
+<div id="out">
+  <h2>Что у вас получилось</h2>
+
+  <div class="res">
+    <b class="k">Позиционирование</b>
+    <div class="big" id="rPos"></div>
+  </div>
+
+  <div class="res" style="background:var(--acc)">
+    <b class="k" style="color:#dbe4ff">Оффер для шапки профиля</b>
+    <div class="big" id="rOffer"></div>
+  </div>
+
+  <div class="card">
+    <h3>Ответы на возражения</h3>
+    <p class="mut">Каждое возражение закрывается по схеме: признать, дать факт, показать,
+    что вы делаете иначе. Не спорьте с человеком, он уже боится.</p>
+    <ul id="rObj"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Темы контента на месяц</h3>
+    <p class="mut">Темы собраны из ваших же цитат, поэтому попадают в живой запрос,
+    а не в фантазию о клиенте.</p>
+    <ol id="rTopics"></ol>
+  </div>
+
+  <div class="card">
+    <h3>Словарь клиента</h3>
+    <p class="mut">Пишите этими словами. Люди ищут в поиске и узнают себя именно так.</p>
+    <div id="rWords"></div>
+  </div>
+
+  <button class="copy" id="copyBtn">Скопировать результат</button>
+  <span class="ok" id="copyOk"></span>
+</div>
+
+<h2>Что с этим делать дальше</h2>
+<p>Позиционирование поставьте в шапку профиля и на первый экран сайта. Ответы на возражения
+разберите по отдельным публикациям, по одной на каждое. Темы поставьте в план, начиная
+с тех, что выросли из страхов: они собирают больше всего сохранений, потому что человек
+боится это забыть.</p>
+<p>Через месяц повторите упражнение на новых отзывах. Список страхов меняется медленно,
+а вот критерии выбора и цены двигаются постоянно.</p>
+
+<div class="form">
+  <h3>Разберу вашу нишу вместе с вами</h3>
+  <p class="mut">Пришлю разбор площадки и покажу, какие смыслы у вас уже есть, но не работают.
+  Бесплатно, без созвона-продажи.</p>
+  <form onsubmit="return sndForm(this)">
+    <input type="hidden" name="Результат" id="hres" value="">
+    <input name="name" placeholder="Как вас зовут" required>
+    <input name="tg" placeholder="Ваш телеграм" required>
+    <button type="submit">Получить разбор</button>
+    <div class="ok" id="fOk"></div>
+  </form>
+</div>
+
+<footer>
+  <span>Мария Кукушкина. Контент-завод под ключ</span>
+  <a href="https://t.me/marya_kukushkina" target="_blank">Написать лично</a>
+</footer>
+</div>
+
+<script>
+var CATS = [
+  {id:'fear',  t:'Страх',            k:'чего боялись до покупки'},
+  {id:'why',   t:'Почему выбрали',   k:'что стало решающим'},
+  {id:'wow',   t:'Что зацепило',     k:'что оказалось лучше ожиданий'},
+  {id:'pain',  t:'За что ругают',    k:'чего людям не прощают'},
+  {id:'words', t:'Слова клиента',    k:'их формулировки, не ваши'}
+];
+var data = {fear:[],why:[],wow:[],pain:[],words:[]};
+var picked = null;
+
+function esc(s){return String(s).replace(/[<>&]/g,function(c){
+  return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];});}
+
+function drawCats(){
+  document.getElementById('cats').innerHTML = CATS.map(function(c){
+    return '<button class="cat'+(picked===c.id?' on':'')+'" data-id="'+c.id+'">'+c.t+'</button>';
+  }).join('');
+  document.querySelectorAll('.cat').forEach(function(b){
+    b.onclick=function(){
+      picked = b.dataset.id;
+      var c = CATS.filter(function(x){return x.id===picked})[0];
+      document.getElementById('hint').textContent = 'Корзина «'+c.t+'»: '+c.k+'.';
+      drawCats(); sync();
+    };
+  });
+}
+
+function drawBins(){
+  document.getElementById('bins').innerHTML = CATS.map(function(c){
+    var items = data[c.id];
+    var li = items.length ? items.map(function(t,i){
+      return '<li><span>'+esc(t)+'</span><button class="del" data-c="'+c.id+
+             '" data-i="'+i+'">×</button></li>';}).join('')
+      : '<div class="empty">пусто</div>';
+    return '<div class="bin"><b>'+c.t+' · '+items.length+'</b><ul>'+li+'</ul></div>';
+  }).join('');
+  document.querySelectorAll('.del').forEach(function(b){
+    b.onclick=function(){ data[b.dataset.c].splice(+b.dataset.i,1); drawBins(); sync(); };
+  });
+}
+
+function total(){var n=0;for(var k in data)n+=data[k].length;return n;}
+
+function sync(){
+  var q = document.getElementById('q').value.trim();
+  document.getElementById('addBtn').disabled = !(q && picked);
+  document.getElementById('goBtn').disabled =
+    !(data.fear.length && data.why.length && (data.wow.length || data.pain.length));
+  document.getElementById('goBtn').textContent =
+    total() < 6 ? 'Собрать смыслы (добавьте ещё цитат, сейчас '+total()+')' : 'Собрать смыслы';
+}
+
+document.getElementById('q').addEventListener('input', sync);
+document.getElementById('addBtn').onclick = function(){
+  var q = document.getElementById('q').value.trim();
+  if(!q || !picked) return;
+  data[picked].push(q.replace(/^[«"]|[»"]$/g,''));
+  document.getElementById('q').value = '';
+  drawBins(); sync();
+};
+
+function low(s){ return s.charAt(0).toLowerCase() + s.slice(1); }
+function cut(s,n){ s=s.trim(); return s.length>n ? s.slice(0,n).replace(/[ ,.;:]+$/,'')+'…' : s; }
+
+document.getElementById('goBtn').onclick = function(){
+  var f = data.fear, w = data.why, wow = data.wow, p = data.pain, wd = data.words;
+
+  var L1 = 'Клиент тянет с решением, потому что: «' + cut(f[0],110) + '»';
+  var L2 = w[0] ? 'Выбирает того, кто это снимает: «' + cut(w[0],110) + '»' : '';
+  var L3 = wow[0] ? 'А запоминает вот что: «' + cut(wow[0],110) + '»'
+                  : (p[0] ? 'И не прощает вот этого: «' + cut(p[0],110) + '»' : '');
+  document.getElementById('rPos').innerHTML =
+    [L1,L2,L3].filter(Boolean).map(function(x){
+      return '<div style="margin-bottom:10px">'+esc(x)+'</div>';}).join('');
+
+  var offer = 'Помогаем [кому] справиться с тем, что «' + cut(low(f[0]),70) + '».<br>' +
+    'Отличаемся тем, что [ваш ответ на слова клиента: «' + cut(low(w[0]||'нам важно'),60) + '»].' +
+    '<div style="font-size:14px;color:#dbe4ff;font-weight:500;margin-top:12px;line-height:1.5">' +
+    'Замените квадратные скобки своими словами. Цитаты не трогайте, это язык клиента, ' +
+    'и именно он попадает в цель.</div>';
+  document.getElementById('rOffer').innerHTML = offer;
+
+  var objSrc = f.concat(p);
+  document.getElementById('rObj').innerHTML = objSrc.slice(0,6).map(function(t){
+    return '<li><b>«'+esc(cut(t,110))+'»</b><br>'+
+      '<span style="color:#5b6572;font-size:14.5px">Признайте, что так бывает, приведите '+
+      'один факт или цифру и покажите, как устроено у вас. Без спора и без «у нас такого нет».</span></li>';
+  }).join('');
+
+  var T = [];
+  f.forEach(function(t){ T.push('Разбор страха: «'+cut(t,90)+'». Так ли это на самом деле'); });
+  w.forEach(function(t){ T.push('Почему выбирают нас: «'+cut(low(t),80)+'» и что за этим стоит'); });
+  wow.forEach(function(t){ T.push('Что удивляет клиентов: «'+cut(low(t),80)+'»'); });
+  p.forEach(function(t){ T.push('Чего мы не делаем никогда: «'+cut(low(t),80)+'»'); });
+  T.push('Сколько это стоит на самом деле и что входит в цену');
+  T.push('Как проходит первый визит, по шагам и без сюрпризов');
+  T.push('Кому мы не подходим и почему говорим об этом прямо');
+  T.push('Разбор одного отзыва: почему человек написал именно так');
+  T.push('Три вопроса, которые стоит задать перед выбором');
+  document.getElementById('rTopics').innerHTML =
+    T.slice(0,12).map(function(t){return '<li>'+esc(t)+'</li>';}).join('');
+
+  var words = wd.length ? wd : f.concat(w).slice(0,4);
+  document.getElementById('rWords').innerHTML = words.length
+    ? words.map(function(t){return '<div style="padding:7px 0;border-top:1px solid #e3e6ec">«'+
+        esc(cut(t,120))+'»</div>';}).join('')
+    : '<p class="mut" style="margin:0">Добавьте цитаты в корзину «Слова клиента», '+
+      'чтобы собрать словарь.</p>';
+
+  document.getElementById('hres').value = 'Смыслы из отзывов, цитат: ' + total();
+  document.getElementById('out').style.display = 'block';
+  document.getElementById('out').scrollIntoView({behavior:'smooth'});
+};
+
+document.getElementById('copyBtn').onclick = function(){
+  var t = 'ПОЗИЦИОНИРОВАНИЕ\n' + document.getElementById('rPos').textContent +
+    '\n\nОФФЕР\n' + document.getElementById('rOffer').textContent +
+    '\n\nВОЗРАЖЕНИЯ\n' + document.getElementById('rObj').innerText +
+    '\n\nТЕМЫ\n' + document.getElementById('rTopics').innerText +
+    '\n\nСЛОВАРЬ КЛИЕНТА\n' + document.getElementById('rWords').innerText;
+  navigator.clipboard.writeText(t).then(function(){
+    document.getElementById('copyOk').textContent = 'Скопировано';
+    setTimeout(function(){document.getElementById('copyOk').textContent='';},1800);
+  });
+};
+
+function sndForm(f){
+  var r = document.getElementById('hres').value || 'без разбора';
+  var t = 'Заявка с сайта%0A%0AИмя: ' + encodeURIComponent(f.name.value) +
+          '%0AТелеграм: ' + encodeURIComponent(f.tg.value) +
+          '%0AРезультат: ' + encodeURIComponent(r);
+  document.getElementById('fOk').textContent =
+    'Спасибо. Открываю телеграм, отправьте сообщение одной кнопкой.';
+  window.open('https://t.me/marya_kukushkina?text=' + t, '_blank');
+  return false;
+}
+
+drawCats(); drawBins(); sync();
+</script>
+</body>
+</html>
