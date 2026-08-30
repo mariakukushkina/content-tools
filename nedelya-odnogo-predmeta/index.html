@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Неделя одного предмета</title>
+<meta name="description" content="Семь дней, семь маленьких действий в сторис и дневник откликов. Простая практика для тех, кто хочет увидеть, что соцсети работают.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#2458e6;--ink:#101828;--mut:#5b6572;--line:#e3e6ec;--paper:#f2f0eb;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);
+     background:#fff;line-height:1.55}
+.wrap{max-width:720px;margin:0 auto;padding:40px 18px 80px}
+.lab{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+     color:var(--acc);margin-bottom:10px}
+h1{font-size:38px;line-height:1.08;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:24px;line-height:1.18;margin:34px 0 10px}
+p{margin-bottom:12px;color:#28303c}
+p.mut{color:var(--mut);font-size:15px}
+.lead{font-size:18px;color:var(--mut)}
+@media(max-width:640px){h1{font-size:29px}}
+
+.pick{background:var(--paper);border-radius:var(--r);padding:20px;margin:20px 0}
+.pick label{display:block;font-weight:800;margin-bottom:8px}
+input[type=text]{width:100%;border:1px solid var(--line);border-radius:12px;
+     padding:14px 15px;font:inherit;font-size:17px;background:#fff}
+input:focus{outline:2px solid var(--acc);outline-offset:-1px}
+
+.day{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;
+     display:flex;gap:14px;align-items:flex-start;cursor:pointer;background:#fff}
+.day.done{background:#f4f8ff;border-color:#c9dcff}
+.day .box{flex:0 0 auto;width:26px;height:26px;border-radius:8px;border:2px solid var(--line);
+     display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;margin-top:2px}
+.day.done .box{background:var(--acc);border-color:var(--acc)}
+.day .n{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+     color:var(--acc);margin-bottom:3px}
+.day b{display:block;font-size:17px;margin-bottom:3px}
+.day span{font-size:14.5px;color:var(--mut)}
+
+.count{background:var(--ink);color:#fff;border-radius:var(--r);padding:22px;margin:22px 0;
+       text-align:center}
+.count .big{font-size:44px;font-weight:800;line-height:1.05}
+.count .d{color:#aab4c4;font-size:15px;margin-top:6px}
+
+.add3{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+@media(max-width:560px){.add3{grid-template-columns:1fr}}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:12px;padding:14px 20px;
+     font:inherit;font-size:16px;font-weight:800;cursor:pointer;width:100%}
+.btn.dark{background:var(--ink)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:700}
+.btn:disabled{background:#c3ccdb;cursor:default}
+
+.log{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:14px}
+.log .row{display:flex;gap:12px;padding:12px 15px;border-top:1px solid var(--line);font-size:15px}
+.log .row:first-child{border-top:0}
+.log .row .w{color:var(--mut);white-space:nowrap;font-size:13px;padding-top:2px}
+.log .row .t{flex:1}
+.log .del{background:none;border:0;color:#b9c0cc;font-size:19px;cursor:pointer;line-height:1}
+.log .empty{padding:16px 15px;color:#9aa3b0;font-size:15px}
+
+.form{background:var(--paper);border-radius:var(--r);padding:22px;margin-top:30px}
+.form input{margin-bottom:10px}
+.ok{color:#178a4c;font-weight:700;margin-top:8px}
+footer{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;font-size:14px;
+     color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--acc);text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="lab">Практика на семь дней</div>
+<h1>Неделя одного предмета</h1>
+<p class="lead">Возьмите одну вещь или одну свою услугу. Семь дней подряд говорите про неё
+по одной минуте в сторис. И записывайте каждый ответ, который к вам прилетел.</p>
+
+<p>Отклик приходит почти всегда, просто его не замечают: ответ на сторис, вопрос в личку,
+чей-то комплимент, неожиданное предложение. Пока это не записано, кажется, что ничего
+не происходит. Через неделю у вас будет список, и вы увидите, сколько на самом деле было.</p>
+
+<div class="pick">
+  <label for="obj">Что берём на эту неделю</label>
+  <input type="text" id="obj" placeholder="Например: духи, мой торт, консультация, свечи ручной работы">
+  <p class="mut" style="margin:10px 0 0">Одна вещь на всю неделю. Не меняйте на середине,
+  иначе не увидите накопленный эффект.</p>
+</div>
+
+<h2>Семь дней</h2>
+<p class="mut">Нажимайте на день, когда сделали. Красиво снимать не нужно, снимайте на телефон
+как есть.</p>
+<div id="days"></div>
+
+<h2>Что прилетело в ответ</h2>
+<p class="mut">Записывайте всё, даже мелочь. «Подруга спросила, где брала» это тоже отклик.</p>
+
+<div class="add3">
+  <input type="text" id="what" placeholder="Что прилетело">
+  <input type="text" id="who" placeholder="От кого">
+</div>
+<button class="btn" id="addBtn">Записать отклик</button>
+
+<div class="count">
+  <div class="big" id="cnt">0</div>
+  <div class="d" id="cntD">откликов за неделю</div>
+</div>
+
+<div class="log" id="log"></div>
+
+<div style="height:14px"></div>
+<button class="btn ghost" id="copyBtn">Скопировать себе</button>
+<span class="ok" id="copyOk"></span>
+
+<h2>Что делать в конце недели</h2>
+<p>Перечитайте список. Отметьте те отклики, которые могли бы стать деньгами или
+возможностью: кто-то спросил цену, кто-то попросил сделать так же, кого-то это навело
+на мысль. Обычно таких оказывается два-три из десяти, и это уже готовые разговоры.</p>
+<p>Если за неделю набралось меньше пяти откликов, дело почти всегда в одном: сторис
+получились про предмет, а не про вас рядом с ним. Люди отвечают на человека.</p>
+
+<div class="form">
+  <h2 style="margin-top:0">Покажу, что делать дальше</h2>
+  <p class="mut">Пришлите свой список откликов, и я скажу, за какие из них стоит взяться
+  и что писать этим людям. Бесплатно.</p>
+  <form onsubmit="return sndForm(this)">
+    <input type="hidden" name="Результат" id="hres" value="">
+    <input type="text" name="name" placeholder="Как вас зовут" required>
+    <input type="text" name="tg" placeholder="Ваш телеграм" required>
+    <button class="btn dark" type="submit">Отправить</button>
+    <div class="ok" id="fOk"></div>
+  </form>
+</div>
+
+<footer>
+  <span>Мария Кукушкина. Контент-завод под ключ</span>
+  <a href="https://t.me/marya_kukushkina" target="_blank">Написать лично</a>
+</footer>
+</div>
+
+<script>
+var DAYS = [
+  ['Просто покажите', 'Без объяснений и без текста. Пусть предмет просто побудет в кадре.'],
+  ['Откуда он у вас', 'Кто подарил, где купили, почему выбрали именно этот.'],
+  ['Что он вам даёт', 'Настроение, удобство, уверенность. Одним предложением.'],
+  ['Спросите совета', 'Задайте подписчикам вопрос про него. Вопрос собирает ответы лучше всего.'],
+  ['Покажите в обычном дне', 'Как он живёт у вас дома или в работе. Между делом.'],
+  ['Кому бы подарили', 'Скажите, кому он подошёл бы и почему вы так думаете.'],
+  ['Скажите прямо', 'Что вы можете сделать или дать это другим. Прямым текстом, без намёков.']
+];
+
+var state = {obj:'', done:[false,false,false,false,false,false,false], log:[]};
+
+function save(){ try{ localStorage.setItem('nop', JSON.stringify(state)); }catch(e){} }
+function load(){
+  try{ var s = localStorage.getItem('nop'); if(s) state = JSON.parse(s); }catch(e){}
+}
+
+function esc(s){return String(s).replace(/[<>&]/g,function(c){
+  return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];});}
+
+function drawDays(){
+  document.getElementById('days').innerHTML = DAYS.map(function(d,i){
+    return '<div class="day'+(state.done[i]?' done':'')+'" data-i="'+i+'">'+
+      '<div class="box">'+(state.done[i]?'✓':'')+'</div>'+
+      '<div><div class="n">День '+(i+1)+'</div><b>'+d[0]+'</b><span>'+d[1]+'</span></div></div>';
+  }).join('');
+  document.querySelectorAll('.day').forEach(function(el){
+    el.onclick=function(){ var i=+el.dataset.i; state.done[i]=!state.done[i]; save(); drawDays(); };
+  });
+}
+
+function drawLog(){
+  var el = document.getElementById('log');
+  el.innerHTML = state.log.length ? state.log.map(function(r,i){
+    return '<div class="row"><div class="w">'+esc(r.d)+'</div>'+
+      '<div class="t"><b>'+esc(r.what)+'</b>'+(r.who?'<br><span style="color:#5b6572;font-size:14px">'+
+      esc(r.who)+'</span>':'')+'</div>'+
+      '<button class="del" data-i="'+i+'">×</button></div>';
+  }).join('') : '<div class="empty">Пока пусто. Первый отклик обычно прилетает в тот же вечер.</div>';
+  document.querySelectorAll('.del').forEach(function(b){
+    b.onclick=function(){ state.log.splice(+b.dataset.i,1); save(); drawLog(); drawCount(); };
+  });
+}
+
+function drawCount(){
+  var n = state.log.length;
+  document.getElementById('cnt').textContent = n;
+  document.getElementById('cntD').textContent =
+    n===0 ? 'откликов пока нет' :
+    n===1 ? 'отклик за неделю' :
+    (n<5 ? 'отклика за неделю' : 'откликов за неделю');
+  document.getElementById('hres').value = 'Неделя одного предмета: ' +
+    (state.obj||'предмет не указан') + ', откликов ' + n;
+}
+
+document.getElementById('obj').addEventListener('input', function(){
+  state.obj = this.value; save(); drawCount();
+});
+
+document.getElementById('addBtn').onclick = function(){
+  var w = document.getElementById('what').value.trim();
+  var k = document.getElementById('who').value.trim();
+  if(!w) { document.getElementById('what').focus(); return; }
+  var dt = new Date();
+  state.log.unshift({d: dt.getDate()+'.'+(dt.getMonth()+1), what:w, who:k});
+  document.getElementById('what').value=''; document.getElementById('who').value='';
+  save(); drawLog(); drawCount();
+};
+
+document.getElementById('copyBtn').onclick = function(){
+  var t = 'НЕДЕЛЯ ОДНОГО ПРЕДМЕТА\nПредмет: ' + (state.obj||'не указан') +
+    '\nСделано дней: ' + state.done.filter(Boolean).length + ' из 7' +
+    '\nОткликов: ' + state.log.length + '\n\n' +
+    state.log.map(function(r){return r.d+' — '+r.what+(r.who?' ('+r.who+')':'');}).join('\n');
+  navigator.clipboard.writeText(t).then(function(){
+    document.getElementById('copyOk').textContent = 'Скопировано';
+    setTimeout(function(){document.getElementById('copyOk').textContent='';},1800);
+  });
+};
+
+function sndForm(f){
+  var t = 'Заявка с сайта%0A%0AИмя: ' + encodeURIComponent(f.name.value) +
+          '%0AТелеграм: ' + encodeURIComponent(f.tg.value) +
+          '%0AРезультат: ' + encodeURIComponent(document.getElementById('hres').value);
+  document.getElementById('fOk').textContent =
+    'Спасибо. Открываю телеграм, отправьте сообщение одной кнопкой.';
+  window.open('https://t.me/marya_kukushkina?text=' + t, '_blank');
+  return false;
+}
+
+load();
+document.getElementById('obj').value = state.obj || '';
+drawDays(); drawLog(); drawCount();
+</script>
+</body>
+</html>
